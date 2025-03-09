@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+    text-transform: uppercase;
+}
+
+:root {
+    --bg-color: #F1F1FF;
+    --dark-color: #1d1d1d;
+    --main-color: #FB5607;
+    --font: "Montserrat Alternates", sans-serif;
+}
+
+html, body {
+    font-size: 20px;
+    width: 100%;
+    overflow-x: hidden;  
+}
+
+section {
+    background: var(--bg-color);
+    width: 100vw;  
+    min-height: 130vh;
+    
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 80px;
+    position: relative;
+}
+
+.content {
+    text-align: start;
+    width: 100%;
+    max-width: 850px;
+    padding: 20px;
+    
+}
+
+.card_1 img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+
+.cards {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.card_1 {
+    width: calc((100% - 60px) / 4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 2;
+}
+.card_1 h1 {
+    font-size: .8rem;
+}
+.card_1 p {
+    font-size: .7rem;
+}
+.card_1 .card_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.container span {
+    width: 100%;
+    height: 100px;
+    background-color: var(--main-color);
+    display: block;
+    top: 65%;
+    position: absolute;
+    z-index: 1;
+}
+
+.card_1:nth-of-type(even) {
+    transform: translateY(100px);
+}
+
+@media (max-width: 768px) {
+    .card_1 {
+        width: calc((100% - 20px) / 2);
+    }
+    section {
+        min-height: 200vh;
+        
+    }
+    .card_1:nth-of-type(even) {
+        transform: translateY(0px);
+    }
+    .content {
+        max-width: 90%;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .card_1 {
+        width: 100%;  
+    }
+    .card_1 img{
+        width: 350px;
+    }
+    .card_1 h1{
+        font-size: 1rem;
+    }
+    section {
+        height: auto;  
+        width: 100vw;
+    }
+    .card_1:nth-of-type(even) {
+        transform: translateY(0px);
+    }
+    .container {
+        padding: 20px;
+    }
+    .content {
+        width: 100%;
+     
+        
+
+    }
+    .content h1 {
+        font-size: 1rem;
+        padding: 0;
+    }
+    p {
+        font-size: 0.5rem;  
+    }
+    .container span {
+        display: none;  
+    }
+    .cards {
+        margin-top: 5px;
+    }
+}
